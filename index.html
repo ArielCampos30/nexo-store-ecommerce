@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Casa Nómada: e-commerce demostrativo de decoración y objetos para el hogar, creado como proyecto de portfolio.">
+  <meta name="theme-color" content="#f5f0e8">
+  <title>Casa Nómada | Objetos para vivir mejor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <div class="announcement">ENVÍOS GRATIS EN COMPRAS DEMO SUPERIORES A $120.000 · PORTFOLIO</div>
+
+  <header class="site-header">
+    <button class="icon-button menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú">☰</button>
+    <a class="brand" href="#inicio" aria-label="Casa Nómada, inicio">Casa <em>Nómada</em></a>
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      <a href="#novedades">Novedades</a>
+      <a href="#colecciones">Colecciones</a>
+      <a href="#catalogo">Tienda</a>
+      <a href="#historia">Nuestra casa</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="search-toggle" type="button" aria-label="Buscar">⌕</button>
+      <button class="icon-button" id="favorites-toggle" type="button" aria-label="Favoritos">♡<span id="favorite-count">0</span></button>
+      <button class="cart-button" id="cart-toggle" type="button">Bolsa <span id="cart-count">0</span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="#novedades">Novedades</a><a href="#colecciones">Colecciones</a><a href="#catalogo">Tienda</a><a href="#historia">Nuestra casa</a>
+    <p>Proyecto demostrativo · datos y compras ficticias.</p>
+  </div>
+
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-panel-inner">
+      <label for="global-search">¿Qué estás buscando?</label>
+      <div class="search-box"><input id="global-search" type="search" placeholder="Lámparas, textiles, cerámica..."><button id="search-close" type="button" aria-label="Cerrar búsqueda">×</button></div>
+      <span>Probá: lámpara, manta, cerámica, mesa</span>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="hero" id="inicio">
+      <div class="hero-image" role="img" aria-label="Living cálido de estilo natural"></div>
+      <div class="hero-copy">
+        <span class="eyebrow">Colección Primavera · 2026</span>
+        <h1>Objetos con calma.<br><em>Casas con historia.</em></h1>
+        <p>Una selección de piezas nobles, texturas naturales y diseño atemporal para transformar lo cotidiano.</p>
+        <div class="hero-actions"><a class="button dark" href="#catalogo">Explorar tienda</a><a class="text-link" href="#colecciones">Ver colecciones →</a></div>
+        <div class="hero-note"><span>01</span><p>Curaduría contemporánea<br>inspirada en materiales honestos.</p></div>
+      </div>
+    </section>
+
+    <section class="editorial-strip" aria-label="Valores de la tienda">
+      <span>Diseño atemporal</span><i>✦</i><span>Materiales nobles</span><i>✦</i><span>Pequeñas series</span><i>✦</i><span>Selección consciente</span>
+    </section>
+
+    <section class="section collections-section" id="colecciones">
+      <div class="section-heading split-heading">
+        <div><span class="eyebrow">Colecciones</span><h2>Elegí cómo querés <em>habitar</em></h2></div>
+        <p>Cada colección reúne objetos que conversan entre sí por material, textura y forma.</p>
+      </div>
+      <div class="collection-grid">
+        <article class="collection-card collection-large" data-category-jump="Iluminación"><div class="collection-image image-lighting"></div><div><span>01</span><h3>Luz Serena</h3><p>Lámparas y objetos que bajan el ritmo.</p></div></article>
+        <article class="collection-card" data-category-jump="Textiles"><div class="collection-image image-textiles"></div><div><span>02</span><h3>Texturas</h3><p>Capas suaves para todos los días.</p></div></article>
+        <article class="collection-card" data-category-jump="Cerámica"><div class="collection-image image-ceramics"></div><div><span>03</span><h3>Mesa Lenta</h3><p>Cerámica de formas imperfectas.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section product-section" id="catalogo">
+      <div class="section-heading">
+        <span class="eyebrow">Tienda</span>
+        <h2>Piezas para todos los días</h2>
+      </div>
+      <div class="shop-toolbar">
+        <div class="category-tabs" id="category-tabs"></div>
+        <div class="sort-wrap"><label for="sort-select">Ordenar</label><select id="sort-select"><option value="featured">Destacados</option><option value="price-asc">Menor precio</option><option value="price-desc">Mayor precio</option><option value="name">Nombre</option></select></div>
+      </div>
+      <div class="active-filter" id="active-filter" hidden></div>
+      <div class="product-grid" id="product-grid"></div>
+      <div class="catalog-footer"><span id="product-count"></span><button class="text-link" id="reset-filters" type="button">Ver todo el catálogo</button></div>
+    </section>
+
+    <section class="story-section" id="historia">
+      <div class="story-image"></div>
+      <div class="story-copy">
+        <span class="eyebrow">Nuestra casa</span>
+        <h2>No seguimos tendencias.<br><em>Elegimos permanencias.</em></h2>
+        <p>Casa Nómada nació como una tienda ficticia para demostrar una experiencia de e-commerce completa: descubrimiento, catálogo, producto, favoritos, carrito y checkout.</p>
+        <p>Todo el contenido comercial, precios, stock y pedidos son demostrativos. El objetivo es mostrar cómo puede sentirse una tienda digital cuidada de principio a fin.</p>
+        <div class="story-stats"><div><strong>24h</strong><span>despacho demo</span></div><div><strong>30</strong><span>días de cambios</span></div><div><strong>100%</strong><span>portfolio</span></div></div>
+      </div>
+    </section>
+
+    <section class="section featured-section" id="novedades">
+      <div class="section-heading split-heading"><div><span class="eyebrow">Selección editorial</span><h2>Lo nuevo de la semana</h2></div><p>Una pequeña selección de objetos que combinan con cualquier espacio sin perder personalidad.</p></div>
+      <div class="featured-row" id="featured-row"></div>
+    </section>
+
+    <section class="newsletter">
+      <span class="eyebrow">Carta Nómada</span>
+      <h2>Ideas para una casa<br>que se sienta tuya.</h2>
+      <p>Suscribite a una newsletter de demostración con novedades, inspiración y lanzamientos ficticios.</p>
+      <form id="newsletter-form"><input type="email" name="email" placeholder="tu@email.com" required><button type="submit">Quiero recibirla</button></form>
+      <small>Sin envíos reales. Formulario demostrativo de portfolio.</small>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><a class="brand footer-brand" href="#inicio">Casa <em>Nómada</em></a><p>E-commerce demostrativo para portfolio.</p></div>
+    <div><strong>Comprar</strong><a href="#catalogo">Tienda</a><a href="#novedades">Novedades</a><a href="#colecciones">Colecciones</a></div>
+    <div><strong>Ayuda</strong><span>Envíos demo</span><span>Cambios</span><span>Preguntas frecuentes</span></div>
+    <div><strong>Proyecto</strong><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+    <p class="footer-bottom">© 2026 Casa Nómada · Proyecto ficticio desarrollado para portfolio. No procesa pagos ni pedidos reales.</p>
+  </footer>
+
+  <aside class="drawer" id="cart-drawer" aria-hidden="true">
+    <div class="drawer-head"><div><span class="eyebrow">Tu selección</span><h2>Bolsa</h2></div><button class="close-button" data-close-drawer type="button">×</button></div>
+    <div class="drawer-body" id="cart-items"></div>
+    <div class="drawer-footer">
+      <div class="coupon-row"><input id="coupon-input" placeholder="Código demo"><button id="coupon-button" type="button">Aplicar</button></div>
+      <div class="totals"><div><span>Subtotal</span><strong id="cart-subtotal">$0</strong></div><div id="discount-row" hidden><span>Descuento</span><strong id="cart-discount">-$0</strong></div><div class="total-row"><span>Total</span><strong id="cart-total">$0</strong></div></div>
+      <button class="button dark full" id="checkout-button" type="button">Iniciar checkout</button>
+      <small>Checkout y pago simulados.</small>
+    </div>
+  </aside>
+
+  <aside class="drawer favorites-drawer" id="favorites-drawer" aria-hidden="true">
+    <div class="drawer-head"><div><span class="eyebrow">Guardados</span><h2>Favoritos</h2></div><button class="close-button" data-close-favorites type="button">×</button></div>
+    <div class="drawer-body" id="favorite-items"></div>
+  </aside>
+
+  <div class="drawer-overlay" id="drawer-overlay" hidden></div>
+
+  <div class="modal-backdrop" id="product-modal" hidden>
+    <section class="product-modal" role="dialog" aria-modal="true" aria-labelledby="product-modal-title">
+      <button class="modal-close" data-close-modal="product-modal" type="button">×</button>
+      <div class="product-modal-media" id="product-modal-media"></div>
+      <div class="product-modal-copy" id="product-modal-copy"></div>
+    </section>
+  </div>
+
+  <div class="modal-backdrop" id="checkout-modal" hidden>
+    <section class="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+      <div class="checkout-head"><div><span class="eyebrow">Compra demostrativa</span><h2 id="checkout-title">Checkout</h2></div><button class="modal-close" data-close-modal="checkout-modal" type="button">×</button></div>
+      <div class="checkout-progress"><span class="active">1 Datos</span><span>2 Envío</span><span>3 Pago demo</span></div>
+      <form id="checkout-form" class="checkout-form">
+        <div class="checkout-fields">
+          <label>Nombre y apellido<input name="name" required placeholder="Ana Martínez"></label>
+          <label>Email<input name="email" type="email" required placeholder="ana@email.com"></label>
+          <label>Ciudad<input name="city" required placeholder="Córdoba"></label>
+          <label>Código postal<input name="zip" required placeholder="5000"></label>
+          <label class="wide">Dirección<input name="address" required placeholder="Av. Siempreviva 123"></label>
+          <label class="wide">Método de envío<select name="shipping"><option value="0">Retiro demo · Gratis</option><option value="6900">Envío estándar · $6.900</option><option value="11900">Envío express · $11.900</option></select></label>
+        </div>
+        <div class="checkout-summary" id="checkout-summary"></div>
+        <button class="button dark full" type="submit">Confirmar pedido demo</button>
+        <small>No se solicitan datos reales de tarjeta. Esta acción solo simula una compra.</small>
+      </form>
+      <div class="order-success" id="order-success" hidden></div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
